@@ -1,3 +1,3 @@
-# SGBUtils - Bliblioteca
+# SGBUtils - Biblioteca
 
 Biblioteca para aplicativos Android
