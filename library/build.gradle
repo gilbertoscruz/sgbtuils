@@ -13,7 +13,7 @@ android {
         versionName "1.0.1"
     }
 
-    //useLibrary 'org.apache.http.legacy'
+    useLibrary 'org.apache.http.legacy'
 
     buildTypes {
         release {
