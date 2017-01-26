@@ -1,0 +1,4 @@
+<resources>
+	<string name="app_titulo_botao_sim">Yes</string>
+	<string name="app_titulo_botao_nao">No</string>
+</resources>

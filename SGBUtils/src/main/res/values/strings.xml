@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">SGBUtils</string>
+	<string name="app_titulo_erro">Ops!</string>
+	<string name="app_titulo_informacao">Info</string>
+	<string name="app_titulo_confirmar">Confirma</string>
+    <string name="app_titulo_botao_sim">Sim</string>
+	<string name="app_titulo_botao_nao">Não</string>
+	<string name="app_mensagem_erro_conexao">Conexão com a internet indisponível.\nPor favor ative sua internet sem fio para continuar.</string>
+	<string name="app_titulo_btn_ok">OK</string>
+	<string name="app_titulo_botao_cancelar">Cancelar</string>
+
+	<string name="app_titulo_janela_confirmacao">Confirmação</string>
+    <string name="app_titulo_janela_informacao">Informação</string>
+    <string name="app_titulo_janela_atencao">Atenção</string>
+    <string name="app_titulo_janela_erro">Erro</string>
+</resources>
