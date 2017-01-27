@@ -106,13 +106,7 @@ public class UtilsFonte {
      */
     public static void setFonteObjeto(final Context context, final View v,
                                       final TipoFonte tipoFonte) {
-
-        if (v instanceof TextView) {
-            ((TextView) v).setTypeface(getTypefaceObjeto(context.getAssets(),
-                    tipoFonte));
-        } else {
-            return;
-        }
+        setFonteObjetos(context, v, tipoFonte);
     }
 
     /**

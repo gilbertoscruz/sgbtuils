@@ -57,6 +57,24 @@ public class UtilsData {
     }
 
     @SuppressLint("SimpleDateFormat")
+    public static String getDataAtual(Date date) {
+        final Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        String formattedDate = df.format(c.getTime());
+        return formattedDate;
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    public static String getDataAtualInternacional(Date date) {
+        final Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String formattedDate = df.format(c.getTime());
+        return formattedDate;
+    }
+
+    @SuppressLint("SimpleDateFormat")
     public static String getDataAtualSemSeparador() {
         final Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
@@ -190,4 +208,84 @@ public class UtilsData {
         return 0;
     }
 
+
+    /**
+     * Calcular idadde
+     * @param dataNasc
+     * @return int
+     */
+    public static int calculaIdade(java.util.Date dataNasc) {
+        Calendar dataNascimento = Calendar.getInstance();
+        dataNascimento.setTime(dataNasc);
+        Calendar hoje = Calendar.getInstance();
+
+        int idade = hoje.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR);
+
+        if (hoje.get(Calendar.MONTH) < dataNascimento.get(Calendar.MONTH)) {
+            idade--;
+        }
+        else
+        {
+            if (hoje.get(Calendar.MONTH) == dataNascimento.get(Calendar.MONTH) && hoje.get(Calendar.DAY_OF_MONTH) < dataNascimento.get(Calendar.DAY_OF_MONTH)) {
+                idade--;
+            }
+        }
+
+        return idade;
+    }
+
+    /**
+     *
+     * @param datePicker
+     * @return
+     */
+    public static java.util.Date getDateFromDatePicker(DatePicker datePicker){
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth();
+        int year =  datePicker.getYear();
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        return calendar.getTime();
+    }
+
+    /**
+     * getTimeFromTimerPicker
+     * @param timePicker
+     * @returnString
+     */
+    public static String getTimeFromTimerPicker(TimePicker timePicker) {
+        return String.format("%02d", timePicker.getHour())
+                + ":"
+                + String.format("%02d", timePicker.getMinute())
+                + ":"
+                + "00";
+
+    }
+
+    /**
+     * compareDates
+     * @param psDate1
+     * @param psDate2
+     * @return boolean
+     * @throws ParseException
+     */
+    public static boolean compareDates(String psDate1, String psDate2) throws ParseException{
+        SimpleDateFormat dateFormat = new SimpleDateFormat ("dd/MM/yyyy");
+        Date date1 = dateFormat.parse(psDate1);
+        Date date2 = dateFormat.parse(psDate2);
+        return date2.after(date1);
+    }
+
+    /**
+     * compareDates
+     * @param psDate1
+     * @param psDate2
+     * @return boolean
+     * @throws ParseException
+     */
+    public static boolean compareDates(Date psDate1, Date psDate2) {
+        return psDate2.after(psDate1);
+    }
 }

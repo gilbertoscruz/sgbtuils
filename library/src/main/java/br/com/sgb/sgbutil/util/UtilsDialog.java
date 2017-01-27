@@ -55,9 +55,44 @@ public class UtilsDialog {
 
         dialog.show();
     }
-
+	
 	/**
 	 * showErrorDialog
+	 * @param activity
+	 * @param msg
+	 * @param fonte
+	 */
+	public static void showErrorDialog(final Activity activity,
+			final String msg, final UtilsFonte.TipoFonte fonte) {
+        final Dialog dialog = new Dialog(activity);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.dialog_error);
+
+        TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+        text.setText(msg);
+        
+
+        Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        
+        UtilsFonte.setFonteObjetos(activity,
+        		dialog.findViewById(R.id.text_dialog), fonte);
+        
+        UtilsFonte.setFonteObjetos(activity,
+        		dialog.findViewById(R.id.btn_dialog), fonte);
+
+        dialog.show();
+    }
+	
+	/**
+	 * showErrorDialog
+	 * @param activity
 	 * @param msg
 	 * @param fonte
 	 */

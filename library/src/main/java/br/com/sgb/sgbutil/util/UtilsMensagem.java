@@ -57,6 +57,23 @@ public class UtilsMensagem {
     }
 
     /**
+     * Alerta de Mensagem - Tipo: Erro
+     * @param context
+     * @param message
+     */
+    public static Dialog alertaMensagemErro(final Context context, final String message,
+                                            final DialogInterface.OnClickListener onclick){
+        Dialog dlg = new AlertDialog.Builder(context, R.style.AlertDialogCustom)
+                .setIcon(R.drawable.ic_error_image)
+                .setTitle("Erro")
+                .setCancelable(false)
+                .setMessage(message)
+                .setPositiveButton("OK", onclick).create();
+        //dlg.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        return dlg;
+    }
+
+    /**
      * Alerta de Mensagem - Tipo: Alerta
      * @param context
      * @param message
@@ -136,6 +153,11 @@ public class UtilsMensagem {
         return dlg;
     }
 
+    /**
+     * Alerta de Mensagem - Tipo: Informacao
+     * @param context
+     * @param message
+     */
     public static Dialog alertaMensagemInfo(final Context context, final String message,
                                             DialogInterface.OnClickListener listener){
         Dialog dlg = new AlertDialog.Builder(context, R.style.AlertDialogCustom)
