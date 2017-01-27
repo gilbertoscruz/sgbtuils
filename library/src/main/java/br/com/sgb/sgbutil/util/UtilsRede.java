@@ -6,11 +6,18 @@ package br.com.sgb.sgbutil.util;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.StrictMode;
+import android.util.Log;
 
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.net.URL;
 import java.util.Enumeration;
+
+import br.com.sgb.sgbutil.consts.Consts;
 
 import br.com.sgb.sgbutils.R;
 
