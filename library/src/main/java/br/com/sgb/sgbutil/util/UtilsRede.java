@@ -79,6 +79,11 @@ public class UtilsRede {
         return ret;
     }
 
+	/**
+     * Obtem o IP atual da rede
+     *
+     * @return String
+     */
     public static String getEnderecoIPLocal() {
         String ip = "";
         try {
@@ -105,5 +110,43 @@ public class UtilsRede {
         }
 
         return ip;
+    }
+	
+	/**
+     * Verifica se possui acesso a internet
+     *
+     * @return boolean
+     */	
+	public static final boolean isAcessaInternet() {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        HttpURLConnection connection = null;
+
+        try {
+            URL url = new URL(Consts.URL_PING_INTERNET);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(15000);
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
+            connection.setUseCaches(false);
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Accept", "application/json");
+
+            OutputStreamWriter streamWriter = new OutputStreamWriter(connection.getOutputStream());
+            streamWriter.write("TEST_INTERNET_ACCESS");
+            streamWriter.flush();
+            StringBuilder stringBuilder = new StringBuilder();
+
+            return (connection.getResponseCode() == HttpURLConnection.HTTP_OK);
+        } catch (Exception exception) {
+            Log.e(Consts.TAG, "Sem acesso a internet.");
+            return false;
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
     }
 }
