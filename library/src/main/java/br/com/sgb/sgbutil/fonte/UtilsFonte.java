@@ -36,13 +36,43 @@ public class UtilsFonte {
     private static String fonte6_Path_Regular = "font/fonte6/OpenSans-Regular.ttf";
     private static String fonte6_Path_Negrito = "font/fonte6/OpenSans-Bold.ttf";
 
-    // private static Typeface typefaceTexto;
+    private static String fonte7_Path_Regular = "font/fonte7/CabinCondensed-Regular.ttf";
+    private static String fonte7_Path_Negrito = "font/fonte7/CabinCondensed-Medium.ttf";
+
+    private static String fonte8_Path_Regular = "font/fonte8/halfmoon_regular.ttf";
+    private static String fonte8_Path_Negrito = "font/fonte8/halfmoon_bold.ttf";
+
+    private static String fonte9_Path_Regular = "font/fonte9/Rabelo-Regular.ttf";
+
+    private static String fonte10_Path_Regular = "font/fonte10/Roundo-Regular.otf";
+    private static String fonte10_Path_Negrito = "font/fonte10/Roundo-Medium.otf";
+    private static String fonte10_Path_Light = "font/fonte10/Roundo-Light.otf";
+
+    private static String fonte11_Path_Regular = "font/fonte11/san_frediano_regular.ttf";
+    private static String fonte11_Path_Negrito = "font/fonte11/san_frediano_bold.ttf";
+    private static String fonte11_Path_Light = "font/fonte11/san_frediano_light.ttf";
+
+    private static String fonte12_Path_Regular = "font/fonte12/Economica-Regular.ttf";
+    private static String fonte12_Path_Negrito = "font/fonte12/Economica-Bold.ttf";
+
+    private static String fonte13_Path_Regular = "font/fonte13/Decalotype-Regular.ttf";
+    private static String fonte13_Path_Negrito = "font/fonte13/Decalotype-Medium.ttf";
+    private static String fonte13_Path_Light = "font/fonte13/Decalotype-Light.ttf";
 
     public enum TipoFonte {
         Fonte1_Negrito, Fonte1_NegritoItalico, Fonte1_Italico, Fonte1_Regular,
-        Fonte2_Negrito, Fonte2_Regular, Fonte3_Negrito, Fonte3_Regular,
+        Fonte2_Negrito, Fonte2_Regular,
+        Fonte3_Negrito, Fonte3_Regular,
         Fonte4_Negrito, Fonte4_NegritoItalico, Fonte4_Italico, Fonte4_Regular,
-        Fonte5_Regular, Fonte6_Regular, Fonte6_Negrito
+        Fonte5_Regular,
+        Fonte6_Regular, Fonte6_Negrito,
+        Fonte7_Regular, Fonte7_Negrito,
+        Fonte8_Regular, Fonte8_Negrito,
+        Fonte9_Regular,
+        Fonte10_Regular, Fonte10_Negrito, Fonte10_Light,
+        Fonte11_Regular, Fonte11_Negrito, Fonte11_Light,
+        Fonte12_Regular, Fonte12_Negrito,
+        Fonte13_Regular, Fonte13_Negrito, Fonte13_Light
     }
 
     ;
@@ -91,6 +121,44 @@ public class UtilsFonte {
             case Fonte6_Negrito:
                 return Typeface.createFromAsset(context, fonte6_Path_Negrito);
 
+            case Fonte7_Regular:
+                return Typeface.createFromAsset(context, fonte7_Path_Regular);
+            case Fonte7_Negrito:
+                return Typeface.createFromAsset(context, fonte7_Path_Negrito);
+
+            case Fonte8_Regular:
+                return Typeface.createFromAsset(context, fonte8_Path_Regular);
+            case Fonte8_Negrito:
+                return Typeface.createFromAsset(context, fonte8_Path_Negrito);
+
+            case Fonte9_Regular:
+                return Typeface.createFromAsset(context, fonte9_Path_Regular);
+
+            case Fonte10_Regular:
+                return Typeface.createFromAsset(context, fonte10_Path_Regular);
+            case Fonte10_Negrito:
+                return Typeface.createFromAsset(context, fonte10_Path_Negrito);
+            case Fonte10_Light:
+                return Typeface.createFromAsset(context, fonte10_Path_Light);
+
+            case Fonte11_Regular:
+                return Typeface.createFromAsset(context, fonte11_Path_Regular);
+            case Fonte11_Negrito:
+                return Typeface.createFromAsset(context, fonte11_Path_Negrito);
+            case Fonte11_Light:
+                return Typeface.createFromAsset(context, fonte11_Path_Light);
+
+            case Fonte12_Regular:
+                return Typeface.createFromAsset(context, fonte12_Path_Regular);
+            case Fonte12_Negrito:
+                return Typeface.createFromAsset(context, fonte12_Path_Negrito);
+
+            case Fonte13_Regular:
+                return Typeface.createFromAsset(context, fonte13_Path_Regular);
+            case Fonte13_Negrito:
+                return Typeface.createFromAsset(context, fonte13_Path_Negrito);
+            case Fonte13_Light:
+                return Typeface.createFromAsset(context, fonte13_Path_Light);
         }
         // }
 
