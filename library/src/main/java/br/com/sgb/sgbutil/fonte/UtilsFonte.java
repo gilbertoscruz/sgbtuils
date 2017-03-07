@@ -59,6 +59,8 @@ public class UtilsFonte {
     private static String fonte13_Path_Negrito = "font/fonte13/Decalotype-Medium.ttf";
     private static String fonte13_Path_Light = "font/fonte13/Decalotype-Light.ttf";
 
+    private static String fonte14_Path = "font/fonte14/digital-7.ttf";
+
     public enum TipoFonte {
         Fonte1_Negrito, Fonte1_NegritoItalico, Fonte1_Italico, Fonte1_Regular,
         Fonte2_Negrito, Fonte2_Regular,
@@ -72,7 +74,8 @@ public class UtilsFonte {
         Fonte10_Regular, Fonte10_Negrito, Fonte10_Light,
         Fonte11_Regular, Fonte11_Negrito, Fonte11_Light,
         Fonte12_Regular, Fonte12_Negrito,
-        Fonte13_Regular, Fonte13_Negrito, Fonte13_Light
+        Fonte13_Regular, Fonte13_Negrito, Fonte13_Light,
+        Fonte14_Digital
     }
 
     ;
@@ -159,6 +162,9 @@ public class UtilsFonte {
                 return Typeface.createFromAsset(context, fonte13_Path_Negrito);
             case Fonte13_Light:
                 return Typeface.createFromAsset(context, fonte13_Path_Light);
+
+            case Fonte14_Digital:
+                return Typeface.createFromAsset(context, fonte14_Path);
         }
         // }
 
