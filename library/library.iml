@@ -104,7 +104,6 @@
     <orderEntry type="library" exported="" name="apache-commons-codec-1.4" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.0.0" level="project" />
-    <orderEntry type="library" exported="" name="android-android-23" level="project" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-23" level="project" />
   </component>
 </module>
