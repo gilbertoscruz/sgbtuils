@@ -43,6 +43,16 @@ public class UtilsMoeda {
     }
 
     /**
+     * Formatar Moeda 4 - Formato: ###,###.##
+     * @param number numero a ser formatado
+     * @return String
+     */
+    public String formatarMoeda4(double number) {
+        DecimalFormat formatter = new DecimalFormat("###,###.##");
+        return formatter.format(number);
+    }
+
+    /**
      * @param value
      * @param decimalPlace
      * @return
