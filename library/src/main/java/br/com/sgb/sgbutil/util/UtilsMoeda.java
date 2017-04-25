@@ -44,7 +44,7 @@ public class UtilsMoeda {
 
     /**
      * Formatar Moeda 4 - Formato: ###,###.##
-     * @param number
+     * @param number numero a ser formatado
      * @return String
      */
     public String formatarMoeda4(double number) {
