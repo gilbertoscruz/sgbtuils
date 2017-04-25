@@ -47,7 +47,7 @@ public class UtilsMoeda {
      * @param number numero a ser formatado
      * @return String
      */
-    public String formatarMoeda4(double number) {
+    public static String formatarMoeda4(double number) {
         DecimalFormat formatter = new DecimalFormat("###,###.##");
         return formatter.format(number);
     }
